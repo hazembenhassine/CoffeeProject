@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Didot';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("Didot-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Didot';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("Didot-Bold.ttf") format('truetype');
+}

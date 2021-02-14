@@ -11,8 +11,8 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('../fonts/fonts.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
 
 html {
   color: #222;
@@ -29,11 +29,11 @@ body, html {
   -webkit-font-smoothing: antialiased;
   background-color: #fff;
   font-size: 14px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   line-height: 1.4;
   letter-spacing: .015rem;
-  color: #4F4F4D;
+  color: #474747;
   position: relative;
   width: 100%;
   overflow-x: hidden;
@@ -551,8 +551,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .section-title {
   font-size: 1.375rem;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-family: 'Didot', sans-serif;
+  font-weight: 400;
   letter-spacing: .03rem;
   margin-bottom: 25px;
 }
@@ -574,4 +574,48 @@ p {
 
 .copy-wrapper p:last-child {
   margin-bottom: 0;
+}
+
+.page-section__btn {
+  margin-top: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-section__btn {
+    margin-top: 50px;
+  }
+}
+
+.btn {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 100px;
+  background-color: #474747;
+  color: #ffffff;
+  padding: 7px 22px 10px;
+  position: relative;
+  overflow: hidden !important;
+  line-height: 1;
+  -webkit-appearance: none !important;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  background-color: #d5c8ac;
+  color: white;
+}
+
+.btn__lbl {
+  position: relative;
+  z-index: 20;
+  font-size: 0.75rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
 }
