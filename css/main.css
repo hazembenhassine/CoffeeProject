@@ -606,7 +606,7 @@ p {
 }
 
 .btn:hover {
-  background-color: #d5c8ac;
+  background-color: #d5c8ad;
   color: white;
 }
 
@@ -618,4 +618,93 @@ p {
   font-weight: 400;
   letter-spacing: .1rem;
   text-transform: uppercase;
+}
+
+.page-date__nav {
+  position: fixed;
+  top: 0;
+  right: 10px;
+  z-index: 100;
+  opacity: 0.4;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.page-date__nav:hover {
+  opacity: 1;
+}
+
+.page-date__nav .vertical-line {
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-pack:center;
+  justify-content:center
+}
+
+.page-date__nav .vertical-line::before {
+  content: '';
+  width: 0;
+  height: 100%;
+  border-right: solid 1px #474747;
+}
+
+.page-date__nav .dot {
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-pack:center;
+  justify-content:center;
+  position: relative;
+}
+
+.page-date__nav .dot::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #474747;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.page-date__nav .dot.this-active::before {
+  transform: scale(2);
+}
+
+.page-date__nav .dot .page-date__btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: auto;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  background: none;
+  border: none;
+}
+
+.page-date__nav .dot .page-date__btn .btn__lbl {
+  font-size: 0.7rem;
+  opacity: 0.6;
+  transform: scale(1);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.page-date__nav .dot.this-active .page-date__btn .btn__lbl {
+
+  transform: scale(1.1);
+  opacity: 1;
 }
