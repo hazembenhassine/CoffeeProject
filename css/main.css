@@ -12,7 +12,7 @@
    ========================================================================== */
 
 @import url('../fonts/fonts.css');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
 html {
   color: #222;
@@ -31,8 +31,6 @@ body, html {
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  line-height: 1.4;
-  letter-spacing: .015rem;
   color: #474747;
   position: relative;
   width: 100%;
@@ -560,6 +558,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 p {
   margin: 0;
   max-width: 800px;
+  line-height: 1.4;
+  letter-spacing: .015rem;
 }
 
 .copy-wrapper p {
@@ -704,7 +704,90 @@ p {
 }
 
 .page-date__nav .dot.this-active .page-date__btn .btn__lbl {
-
   transform: scale(1.1);
   opacity: 1;
+}
+
+.navbar {
+  padding: 7px;
+  overflow: visible;
+  position: relative;
+  border-bottom: solid 1px #cccccc;
+}
+
+.navbar .navbar-toggler {
+  color: #cccccc;
+  border-color: #cccccc;
+}
+
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media only screen and (min-width: 1200px) {
+  .navbar {
+    padding: 0 60px;
+    height: 115px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar .navbar-brand {
+    height: 100%;
+    width: 35px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .navbar .navbar-brand {
+    display: none;
+    width: 175px;
+    background: white;
+    padding: 22px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -webkit-box-shadow: 0 0 10px 0 #cccccc96;
+    -moz-box-shadow: 0 0 10px 0 #cccccc96;
+    box-shadow: 0 0 10px 0 #cccccc96;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .navbar .navbar-brand {
+    display: block;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .navbar .navbar-collapse {
+    height: 100%;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .navbar .navbar-collapse .nav-item {
+    margin: 5px 10px;
+    min-width: 100px;
+    text-align: center;
+  }
+}
+
+.navbar .navbar-collapse .nav-item a.nav-link {
+  color: #474747;
+  font-weight: 400;
+  transition: all .2s ease;
+}
+
+.navbar .navbar-collapse .nav-item.active a.nav-link,.navbar .navbar-collapse .nav-item:hover a.nav-link {
+  font-weight: 600;
+}
+
+.test {
+  height: 100vh;
 }
