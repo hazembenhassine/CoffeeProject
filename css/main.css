@@ -305,12 +305,6 @@ textarea {
   z-index: 99;
 }
 
-@media only screen and (min-width: 1200px) {
-  .page {
-    padding-top: 115px;
-  }
-}
-
 @media only screen and (min-width: 992px) {
   .page.ecommerce {
     padding-left: 15vw;
@@ -329,13 +323,13 @@ textarea {
 @media only screen and (min-width: 992px) {
   .page-left, .page-right {
     width: 42vw;
-    min-height: calc(100vh - 52px);
+    min-height: 100vh;
   }
 }
 @media only screen and (min-width: 1200px) {
   .page-left, .page-right {
     width: 42.5vw;
-    min-height: calc(100vh - 115px);
+    min-height: 100vh;
   }
 }
 .page-left {
@@ -349,16 +343,16 @@ textarea {
 
 @media only screen and (min-width: 992px) {
   .page-left {
-    top: 52px;
-    height: calc(100vh - 52px);
+    top: 0;
+    height: 100vh;
     position: fixed;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .page-left {
-    top: 115px;
-    height: calc(100vh - 115px);
+    top: 0;
+    height: 100vh;
     position: fixed;
   }
 }
@@ -436,14 +430,14 @@ textarea {
 @media only screen and (min-width: 768px) {
   .page-section {
     padding: 0 30px 90px;
-    min-height: calc(100vh - 115px);
+    min-height: 100vh;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .page-section {
     padding: 28vh 30px 18vh;
-    min-height: calc(75vh - 115px);
+    min-height: 75vh;
   }
 }
 
@@ -767,7 +761,7 @@ p {
 }
 
 .page-date__nav .dot .page-date__btn .btn__lbl {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   opacity: 0.6;
   transform: scale(1);
   -webkit-transition: all 0.5s ease;
@@ -849,23 +843,73 @@ p {
 }
 
 @media only screen and (min-width: 1200px) {
-  .navbar .navbar-collapse .nav-item {
+  .nav-item {
     margin: 5px 10px;
-    min-width: 100px;
-    text-align: center;
+    text-align: right;
   }
+
+  .nav-item.text {
+    min-width: 100px;
+  }
+
 }
 
-.navbar .navbar-collapse .nav-item a.nav-link {
+a.nav-link {
   color: #474747;
   font-weight: 400;
   transition: all .2s ease;
 }
 
-.navbar .navbar-collapse .nav-item.active a.nav-link,.navbar .navbar-collapse .nav-item:hover a.nav-link {
+a.nav-link img {
+  height: 25px;
+  width: 25px;
+}
+
+.nav-item.active a.nav-link {
   font-weight: 600;
+}
+
+.nav-item:not(.active) a.nav-link:hover {
+  color: #d5c8ad;
 }
 
 .test {
   height: 100vh;
 }
+
+.nav-item {
+  position: relative;
+}
+
+.dropdown {
+  list-style: none;
+  padding-left: 0;
+  background: white;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  z-index: 101;
+  transition: all 0.5s ease;
+  margin: 0;
+  left: 0;
+  display: none;
+  border: solid 1px #474747;
+  border-bottom: none;
+}
+
+.nav-item:hover .dropdown,
+.nav-item .dropdown:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.dropdown li {
+  clear: both;
+  border-bottom: solid 1px #474747;
+  width: 100%;
+  text-align: left;
+}
+
+
